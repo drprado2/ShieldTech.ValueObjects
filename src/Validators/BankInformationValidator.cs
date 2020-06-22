@@ -7,6 +7,9 @@ namespace ShieldTech.ValueObjects.Validators
     {
         public BankInformationValidator()
         {
+            RuleFor(x => new Cnpj(x.BankAccountCnpj))
+                .SetValidator(new CnpjValidator());
+            
             RuleFor(x => x.BankAgency)
                 .NotEmpty()
                 .WithMessage("A agência bancária é de preenchimento obrigatório");

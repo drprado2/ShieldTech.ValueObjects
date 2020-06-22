@@ -9,8 +9,6 @@ namespace ShieldTech.ValueObjects.ValueObjects
         public string ContactName { get; set; }
         public string ContactCellphone { get; set; }
         public string ContactEmail { get; set; }
-        public Email ContactEmailObj => new Email(ContactEmail);
-        public Cellphone ContactCellphoneObj => new Cellphone(ContactCellphone);
 
         public override bool IsValid => _isValid;
 
